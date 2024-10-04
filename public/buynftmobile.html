@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request NFT</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-auto">
+
+    <!-- Modal Container -->
+    <div class="absolute top-[0%] z-[999] w-full pl-2 pr-2 pb-6 pt-4 h-full bg-white rounded-lg shadow-lg">
+        
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between">
+            <h2 class="text-[20px] font-bold leading-[24.2px] text-[#333333]">Request This NFT</h2>
+            <svg hx-get="egetyminingmobile.html" hx-target="#main-contentmobile" hx-swap="innerHTML" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L19 19.5M1 19.5L19 1.5L1 19.5Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+        </div>
+        
+        <!-- NFT Image -->
+        <img src="/images/buynft.png" alt="NFT Image" class="w-full h-48 mt-[30px] rounded-lg object-cover mb-3">
+        
+        <!-- NFT Title and Description -->
+        <h3 class="text-[20px] font-[500] leading-[24.2px] text-[#333333] text-center ">Neon Byte</h3>
+        <p class="text-[16px] font-[400] leading-[19.2px] text-[#8A8A8A] mb-2 mt-2">
+            An accessible and vibrant entry into the ecosystem.
+        </p>
+        <p class="text-[14px] font-[400] leading-[17px] text-[#8A8A8A] mb-2 mt-2">
+            Please pay due amount through the following Wallet Address and send a screenshot to the following E-Mail:"
+            <a href="mailto:info@plenvida.com" class="text-[14px] font-[500] leading-[19.2px] text-[#04165B]">info@plenvida.com</a>"
+        </p>
+        
+        <!-- Wallet Address Section -->
+        <div class="mb-8 border border-[#E7E7E7] p-2 rounded-md">
+            <label class="block text-[16px] font-[500] leading-[19px] text-[#333333] mb-2">Wallet Address</label>
+            <div class="space-y-2">
+                <!-- TRC20 Address -->
+                <div class="p-2 bg-white border border-[#E7E7E7] rounded-md">
+                    <p class="text-[18px] font-[500] leading-[21.7px] text-[#04165B]">TRC20</p>
+                    <p class="text-[14px] font-[400] leading-[17px] text-[#8A8A8A] truncate">TRNtFLTqRBpN1cSk14wh4wit5mFW8M4sza</p>
+                </div>
+                <!-- BEP20 Address -->
+                <div class="p-2 border border-[#E7E7E7] bg-white rounded-md">
+                    <p class="text-[18px] font-[500] leading-[21.7px] text-[#04165B]">BEP20</p>
+                    <p class="text-[14px] font-[400] leading-[17px] text-[#8A8A8A] truncate">0xdBa8cB36C3a27063837eC42aBF5876d....</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Buttons -->
+        <div class="flex space-x-4">
+            <button class="w-[80%] py-[4px] bg-[#04165B] text-[14px] font-inter leading-[17px] text-white font-medium rounded-[8px] hover:bg-blue-700 transition">
+                Request
+            </button>
+            <button hx-get="egetyminingmobile.html" hx-target="#main-contentmobile" hx-swap="innerHTML" class="w-[20%] py-[4px] text-[14px] leading-[17px] font-inter  border border-[#04165B] text-[#04165B] font-medium rounded-lg hover:bg-gray-100 transition">
+                Cancel
+            </button>
+        </div>
+        
+    </div>
+
+</body>
+</html>
